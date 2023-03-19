@@ -1,94 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stile.css">
-    <title>CLASSIFICA</title>
-</head>
-<body>
-    <header>
-        <div class="menu">
-            <nav>
-                <div class="fotomenu">
-                  <a href="home.html"><img id="f1logo" src="immagini/f1logo.png"></a> 
-                </div>
-        
-              <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/classifica.html">CLASSIFICA</a></button>
-              </div>
-        
-              <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/piloti.html">PILOTI</a></button>
-                <div class="dropdown-content-piloti">
-                  <div class="piloti">
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/verstappen.PNG">M. Verstappen</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/leclerc.PNG">C. Leclerc</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/hamilton.PNG">L. Hamilton</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/norris.PNG">L. Norris</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/verstappen.PNG">P. Gasly</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/bottas.PNG">V. Bottas</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/verstappen.PNG">F. Alonso</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/magnussen.PNG">K. Magnussen</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/tsunoda.PNG">Y. Tsunoda</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/albon.PNG">A. Albon</a>
-                  </div>
-                  <div class="piloti">
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/perez.PNG">S. Perez</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/sainz.PNG">C. Sainz</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/russel.PNG">G. Russel</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/verstappen.PNG">O. Piastri</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/ocon.PNG">E. Ocon</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/zhou.PNG">G. Zhou</a>
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/stroll.PNG">L. Stroll</a> 
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/verstappen.PNG">N. Hülkenberg</a>                        
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/verstappen.PNG">N. De Vries</a>                       
-                    <a href="pagine/piloti.html"><img id="caschi" src="immagini/sargent.PNG">L. Sargent</a>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/teams.html">TEAMS</a></button>
-                <div class="dropdown-content-teams">
-                  <div class="teams">
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/redbull.jpg">Red Bull</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/mercedes.jpg">Mercedes</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/alpine.png">Alpine</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/aston.jpg">Aston Martin</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/alphatauri.jpg">Alpha Tauri</a>
-                  </div>
-                  <div class="teams">
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/ferrari.jpg">Ferrari</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/mclaren.png">McLaren</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/alfa romeo.jpeg">Alfa Romeo</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/haas.jpg">Haas</a>
-                    <a href="pagine/teams.html"><img id="logo" src="immagini/williams.jpg">Williams</a>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/circuiti.html">CIRCUITI</a></button>
-                <div class="dropdown-content">
-                    <a href="Atlantic division.html">Atlantic division</a>
-                    <a href="Central division.html">Central division</a>
-                    <a href="South-east division.html">South-east division</a>
-                  </div>
-              </div>
-        
-              <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/stagionipassate.html">STAGIONI</a></button>
-              </div>
 
-              <div class="fotomenu">
-                <a href="https://www.fia.com/"><img id="fialogo" src="immagini/fialogo.png"></a>
-            </div>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../stile.css">
+      <link rel="icon" type="img/png" href="../immagini/f11.png">
+      <title>CLASSIFICA</title>
+  </head>
 
-            </nav>
-          </div>
-        
-    </header>
-</body>
+  <body class="classifica">
+    <div>
+      <script src="../script_header/script_header.js"></script>
+
+
+      <menu>
+        <div>
+          <h1 id="titoloclassifica">CLASSIFICA PILOTI 2023</h1>
+        </div>
+        <div class="tabella">
+          <table class="tab"; cellspacing ="0"; cellpadding ="0";>
+            <tr>
+              <td id="nomigs">PILOTI</td>
+              <td id="gp"><img id="bandiera" src="../immagini/bahrain.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/arabia.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/australia.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/china.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/azerbaijan.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/USA.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/italia.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/monaco.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/spagna.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/canada.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/Austria.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/uk.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/ungheria.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/belgio.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/Olanda.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/italia.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/singapore.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/giappone.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/qatar.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/USA.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/messico.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/brasile.jpg"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/USA.png"></td>
+              <td id="gp"><img id="bandiera" src="../immagini/abudhabi.png"></td>  
+              <td id="tot">TOT</td>
+            </tr>
+            <tr>
+              <td id="nomigc">VERSTAPPEN</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">PEREZ</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>     
+            </tr>
+            <tr>
+              <td id="nomigc">LECLERC</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">SAINZ</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">HAMILTON</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">RUSSEL</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">NORRIS</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">PIASTRI</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">GASLY</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">OCON</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">ALONSO</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">STROLL</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">BOTTAS</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>  
+            </tr>
+            <tr>
+              <td id="nomigs">ZHOU</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">MAGNUSSEN</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">HULKENBERG</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">TSUNODA</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+            </tr>
+            <tr>
+              <td id="nomigs">DE VRIES</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            <tr>
+              <td id="nomigc">ALBON</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>
+              <td id="puntig">0</td>           
+            </tr>
+            <tr>
+              <td id="nomigs">SARGEANT</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>
+              <td id="punti">0</td>      
+            </tr>
+            
+            </table>
+        </div>
+      </menu>
+
+      <footer>
+        <div class="foot">
+          <p>federico.sala01@liceobanfi.eu  -  gasparing.davide@liceobanfi.eu</p>
+          <p>+39 346 6433 325  -  +39 542 2655 886</p>
+          <p>Sala Federico  -  Gasparin Davide</p>
+        </div>
+      </footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".icon_bar").click(function(e){
+
+                $(".menu").toggleClass('is-open');
+                
+                  
+
+                e.preventDefault();
+
+            });
+
+        });
+    </script>
+  </body>
 </html>
