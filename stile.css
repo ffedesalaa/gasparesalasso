@@ -346,7 +346,7 @@ nav{
 }
 
 .Login{
-    width: 100px%;
+    width: 100px;
     text-align: center;
     padding: 3px;
 }
@@ -918,6 +918,7 @@ label{
 
 input{
     height: 30px;
+    border: none;
 }
 
 input::placeholder{
