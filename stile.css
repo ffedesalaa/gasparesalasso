@@ -834,7 +834,10 @@ footer p{color: #fff;}
 
 /*PAGINA LOGIN */
 
-
+#paccesso{
+    color: black;
+    background: white;
+}
 
 .contenitore_accesso{   
     display: flex;
