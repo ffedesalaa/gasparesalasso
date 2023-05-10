@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,21 +27,24 @@
             </div>
         </header>
     <div class="contenitore_accesso">
-         <form action="../../file_php/esempio.php">
-            <label for="email">Nome</label>
-            <input type="text" placeholder="Inserisci Nome" name="email" id="email" required>
-            <label for="password">Cognome</label>
-            <input type="text" placeholder="Inserisci Cognome" name="password" id="password" required>
+         <form action="../../file_php/registrazione.php" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Inserisci Nome" name="nome" id="nome" required>
+            <label for="cognome">Cognome</label>
+            <input type="text" placeholder="Inserisci Cognome" name="cognome" id="cognome" required>
             <label for="email">Email</label>
-            <input type="text" placeholder="Inserisci email" name="email" id="email" required>
+            <input type="email" placeholder="Inserisci email" name="email" id="email" required>
             <label for="password">Password</label>
-            <input type="text" placeholder="Inserisci Password" name="password" id="password" required>
-            <label for="password">Conferma password</label>
-            <input type="text" placeholder="Conferma password" name="conferma" id="password" required>
+            <input type="password" placeholder="Inserisci Password" name="password" id="password"  required>
+            <label for="conferma">Conferma password</label>
+            <input type="password" placeholder="Conferma password" name="conferma" id="password"  required>
             <input type="submit" value="Accedi" id="bottone_dati">
         </form>
     </div>
   
+    <div class="iscrizione_controllo">
+      
+    </div>
 
     </body>
 

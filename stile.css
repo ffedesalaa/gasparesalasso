@@ -918,7 +918,9 @@ label{
 
 input{
     height: 30px;
-    border: none;
+    width: 100%;
+     margin-bottom: 30px;
+    border: solid black 3px;
 }
 
 input::placeholder{
