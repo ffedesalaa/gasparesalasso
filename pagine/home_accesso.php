@@ -1,18 +1,15 @@
 <?php
     session_start();
 
-    require_once('../../file_php/dati_connessione.php');
+    require_once('../file_php/dati_connessione.php');
 
     if(isset($_SESSION["nome"]))
     {
-        header('location ../../home.php');
+        header('location ../home.php');
     }
 
-    $nome = $_SESSION["nome"];
+    $nome = $_SESSION['nome'];
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html> 
@@ -69,30 +66,30 @@
 
             <div class="sigla">
               <video width=100% autoplay muted loop>
-                <source src="video/siglaf1.mp4" type="video/mp4">
+                <source src="../video/siglaf1.mp4" type="video/mp4">
               </video>
             </div>
 
             <div class="slideshow-container">
 
               <div class="mySlides fade">
-                <img src="immagini/1.jpg" style="width:100%">
+                <img src="../immagini/1.jpg" style="width:100%">
               </div>
             
               <div class="mySlides fade">
-                <img src="immagini/2.jpg" style="width:100%">
+                <img src="../immagini/2.jpg" style="width:100%">
               </div>
             
               <div class="mySlides fade">
-                <img src="immagini/3.png" style="width:100%">
+                <img src="../immagini/3.png" style="width:100%">
               </div>
 
               <div class="mySlides fade">
-                <img src="immagini/4.jpg" style="width:100%">
+                <img src="../immagini/4.jpg" style="width:100%">
               </div>
 
               <div class="mySlides fade">
-                <img src="immagini/5.jpg" style="width:100%">
+                <img src="../immagini/5.jpg" style="width:100%">
               </div>            
             </div>
             

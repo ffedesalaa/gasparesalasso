@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+
+    if(isset($_POST["email"])) {$email = $_POST["email"];} else {$email = "";}
+    if(isset($_POST["password"])) {$password = $_POST["password"];} else {$password = "";}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,15 +33,52 @@
         </header>
     <div class="contenitore_accesso" id="contenitoreacc">
         <div class="contenitore_form">
-            <form action="../file_php/esempio.php" method="POST">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Inserisci email" name="email" id="email" required>
+                <input type="email" placeholder="Inserisci email" name="email" id="email" required>
                 <label for="password">Password</label>
-                <input type="text" placeholder="Inserisci password" name="password" id="password" required>
+                <input type="password" placeholder="Inserisci password" name="password" id="password" required>
                 <input type="submit" value="Accedi" id="bottone_dati">
             </form>
         </div>
     </div>
+
+
+    <p id="paccesso">
+        <?php
+
+        if(isset($email) AND isset($password))
+        {
+            $connessione = new mysqli("localhost", "root", "", "formula_1");
+
+            if($connessione->connect_error)
+            {
+                die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
+            }
+
+            $sql = "SELECT email, password FROM utente WHERE email = '$email' AND password = '$password'";
+
+            $ris = $connessione->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");            ;
+
+            $num_rows = mysqli_num_rows($ris);
+
+            if($num_rows == 0)
+            {
+                echo"Utente non trovato";
+                $connessione->close();
+            }
+            else
+            {
+                $_SESSION["email"] = $email;
+
+                $connessione->close();
+
+                header("Refresh 1; URL=home_accesso.php");
+            }
+
+        }
+        ?>
+    </p>    
   
 
     </body>

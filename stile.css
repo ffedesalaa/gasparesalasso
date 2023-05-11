@@ -345,11 +345,32 @@ nav{
     width: 200px;
 }
 
+.saluto{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.saluto_utente{
+    background: white;
+    width: 50%;
+}
+
+.saluto_utente p{
+    color: black;
+    font-family: 'formula1-bold';
+    text-align: center;
+}
+
 .Login{
     width: 100px;
     text-align: center;
     padding: 3px;
 }
+
+
 
 .Login:hover{
     background-color: red;
@@ -837,6 +858,8 @@ footer p{color: #fff;}
 #paccesso{
     color: black;
     background: white;
+    text-align: center;
+    margin-top: 0px;
 }
 
 .contenitore_accesso{   
@@ -844,7 +867,7 @@ footer p{color: #fff;}
     align-items: center;
     justify-content: center;
     background: white;
-    min-height: 700px;
+    min-height: 550px;
     position: relative;
 }
 

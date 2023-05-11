@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST["nome"])) $nome = $_POST["nome"];  else $nome = "";
     if(isset($_POST["cognome"])) $cognome = $_POST["cognome"];  else $cognome = "";
-    if(isset($_POST["email"])) $email = $_POST["email"];  else $email = "";
+    if(isset($_POST["email"])) $email = $_POST["email"]; else $email ="";
     if(isset($_POST["password"])) $password = $_POST["password"];  else $password = "";
     if(isset($_POST["conferma"])) $conferma = $_POST["conferma"];  else $conferma = "";
 ?>
@@ -61,7 +61,7 @@
 
                  $myquery = "SELECT email
 						    FROM utente 
-						    WHERE email='"  . $email . "'";
+						    WHERE email='" . $email . "'";
 
                     $ris = $connessione->query($myquery);
 
@@ -73,22 +73,24 @@
                 }
                 else
                 {
-                    $myquery = "INSERT INTO $tipologia (nome, cognome, password, email)
-                           VALUES ('$nome', '$cognome', '$password', '$email')";
+                        $myquery = "INSERT INTO utente (nome, cognome, password, email)
+                            VALUES ('$nome', '$cognome', '$password', '$email')";
+
+                        if ($connessione->query($myquery) === true) {
+                        session_start();
+                        $_SESSION["email"]=$email;
+                        
+                        $connessione->close();
+
+                        echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
+                        header('Refresh: 5; URL=home_accesso.php');
+
+                    } else {
+                        echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $connessione->error;
+                    }       
                 }
                 
-                if ($connessione->query($myquery) === true) {
-                    session_start();
-                    $_SESSION["email"]=$email;
-                    
-                    $conn->close();
-
-                    echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
-                    header('Refresh: 5; URL=home.php');
-
-                } else {
-                    echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $connessione->error;
-                }
+              
                 
 
                 
