@@ -13,7 +13,7 @@
     <div>
       <header>
         <div class="fotomenuhome">
-          <a href="home.html"><img id="f1logo" src="immagini/f1logo.png"></a> 
+          <a href="home.php"><img id="f1logo" src="immagini/f1logo.png"></a> 
         </div>
 
         <a href=""><div class="icon_bar">
@@ -29,94 +29,94 @@
                 <button class="dropbtn"><a href="pagine/piloti.html">PILOTI</a></button>
                   <div class="dropdown-content-piloti">
                     <div class="piloti">
-                      <a href="pagine/piloti.html #VER"><img id="caschi" src="immagini/verstappen.PNG">M. Verstappen</a>
-                      <a href="pagine/piloti.html #LEC"><img id="caschi" src="immagini/leclerc.PNG">C. Leclerc</a>
-                      <a href="pagine/piloti.html #HAM"><img id="caschi" src="immagini/hamilton.PNG">L. Hamilton</a>
-                      <a href="pagine/piloti.html #NOR"><img id="caschi" src="immagini/norris.PNG">L. Norris</a>
-                      <a href="pagine/piloti.html #GAS"><img id="caschi" src="immagini/gasly.PNG">P. Gasly</a>
-                      <a href="pagine/piloti.html #BOT"><img id="caschi" src="immagini/bottas.PNG">V. Bottas</a>
-                      <a href="pagine/piloti.html #ALO"><img id="caschi" src="immagini/alonso.PNG">F. Alonso</a>
-                      <a href="pagine/piloti.html #MAG"><img id="caschi" src="immagini/magnussen.PNG">K. Magnussen</a>
-                      <a href="pagine/piloti.html #TSU"><img id="caschi" src="immagini/tsunoda.PNG">Y. Tsunoda</a>
-                      <a href="pagine/piloti.html #ALB"><img id="caschi" src="immagini/albon.PNG">A. Albon</a>
+                      <a href="pagine/piloti.php #VER"><img id="caschi" src="immagini/verstappen.PNG">M. Verstappen</a>
+                      <a href="pagine/piloti.php #LEC"><img id="caschi" src="immagini/leclerc.PNG">C. Leclerc</a>
+                      <a href="pagine/piloti.php #HAM"><img id="caschi" src="immagini/hamilton.PNG">L. Hamilton</a>
+                      <a href="pagine/piloti.php #NOR"><img id="caschi" src="immagini/norris.PNG">L. Norris</a>
+                      <a href="pagine/piloti.php #GAS"><img id="caschi" src="immagini/gasly.PNG">P. Gasly</a>
+                      <a href="pagine/piloti.php #BOT"><img id="caschi" src="immagini/bottas.PNG">V. Bottas</a>
+                      <a href="pagine/piloti.php #ALO"><img id="caschi" src="immagini/alonso.PNG">F. Alonso</a>
+                      <a href="pagine/piloti.php #MAG"><img id="caschi" src="immagini/magnussen.PNG">K. Magnussen</a>
+                      <a href="pagine/piloti.php #TSU"><img id="caschi" src="immagini/tsunoda.PNG">Y. Tsunoda</a>
+                      <a href="pagine/piloti.php #ALB"><img id="caschi" src="immagini/albon.PNG">A. Albon</a>
                     </div>
                     <div class="piloti">
-                      <a href="pagine/piloti.html #PER"><img id="caschi" src="immagini/perez.PNG">S. Perez</a>
-                      <a href="pagine/piloti.html #SAI"><img id="caschi" src="immagini/sainz.PNG">C. Sainz</a>
-                      <a href="pagine/piloti.html #RUS"><img id="caschi" src="immagini/russel.PNG">G. Russell</a>
-                      <a href="pagine/piloti.html #PIA"><img id="caschi" src="immagini/piastri.png">O. Piastri</a>
-                      <a href="pagine/piloti.html #OCO"><img id="caschi" src="immagini/ocon.PNG">E. Ocon</a>
-                      <a href="pagine/piloti.html #ZHO"><img id="caschi" src="immagini/zhou.PNG">G. Zhou</a>
-                      <a href="pagine/piloti.html #STR"><img id="caschi" src="immagini/stroll.PNG">L. Stroll</a> 
-                      <a href="pagine/piloti.html #HUL"><img id="caschi" src="immagini/hulkenberg.PNG">N. Hülkenberg</a>                        
-                      <a href="pagine/piloti.html #DEV"><img id="caschi" src="immagini/devries.PNG">N. De Vries</a>                       
-                      <a href="pagine/piloti.html #SAR"><img id="caschi" src="immagini/sargent.PNG">L. Sargeant</a>
+                      <a href="pagine/piloti.php #PER"><img id="caschi" src="immagini/perez.PNG">S. Perez</a>
+                      <a href="pagine/piloti.php #SAI"><img id="caschi" src="immagini/sainz.PNG">C. Sainz</a>
+                      <a href="pagine/piloti.php #RUS"><img id="caschi" src="immagini/russel.PNG">G. Russell</a>
+                      <a href="pagine/piloti.php #PIA"><img id="caschi" src="immagini/piastri.png">O. Piastri</a>
+                      <a href="pagine/piloti.php #OCO"><img id="caschi" src="immagini/ocon.PNG">E. Ocon</a>
+                      <a href="pagine/piloti.php #ZHO"><img id="caschi" src="immagini/zhou.PNG">G. Zhou</a>
+                      <a href="pagine/piloti.php #STR"><img id="caschi" src="immagini/stroll.PNG">L. Stroll</a> 
+                      <a href="pagine/piloti.php #HUL"><img id="caschi" src="immagini/hulkenberg.PNG">N. Hülkenberg</a>                        
+                      <a href="pagine/piloti.php #DEV"><img id="caschi" src="immagini/devries.PNG">N. De Vries</a>                       
+                      <a href="pagine/piloti.php #SAR"><img id="caschi" src="immagini/sargent.PNG">L. Sargeant</a>
                     </div>
                   </div>
               </div>
               
               <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/teams.html">TEAMS</a></button>
+                <button class="dropbtn"><a href="pagine/teams.php">TEAMS</a></button>
                   <div class="dropdown-content-teams">
                     <div class="teams">
-                      <a href="pagine/teams.html #RDB"><img id="logo" src="immagini/redbull.jpg">Red Bull</a>
-                      <a href="pagine/teams.html #MRC"><img id="logo" src="immagini/mercedes.jpg">Mercedes</a>
-                      <a href="pagine/teams.html #ALP"><img id="logo" src="immagini/alpine.png">Alpine</a>
-                      <a href="pagine/teams.html #AST"><img id="logo" src="immagini/aston.jpg">Aston Martin</a>
-                      <a href="pagine/teams.html #AT"><img id="logo" src="immagini/alphatauri.jpg">Alpha Tauri</a>
+                      <a href="pagine/teams.php #RDB"><img id="logo" src="immagini/redbull.jpg">Red Bull</a>
+                      <a href="pagine/teams.php #MRC"><img id="logo" src="immagini/mercedes.jpg">Mercedes</a>
+                      <a href="pagine/teams.php #ALP"><img id="logo" src="immagini/alpine.png">Alpine</a>
+                      <a href="pagine/teams.php #AST"><img id="logo" src="immagini/aston.jpg">Aston Martin</a>
+                      <a href="pagine/teams.php #AT"><img id="logo" src="immagini/alphatauri.jpg">Alpha Tauri</a>
                     </div>
                     <div class="teams">
-                      <a href="pagine/teams.html #FRR"><img id="logo" src="immagini/ferrari.jpg">Ferrari</a>
-                      <a href="pagine/teams.html #MCL"><img id="logo" src="immagini/mclaren.png">McLaren</a>
-                      <a href="pagine/teams.html #ALF"><img id="logo" src="immagini/alfa romeo.jpeg">Alfa Romeo</a>
-                      <a href="pagine/teams.html #HAAS"><img id="logo" src="immagini/haas.jpg">Haas</a>
-                      <a href="pagine/teams.html #WLM"><img id="logo" src="immagini/williams.jpg">Williams</a>
+                      <a href="pagine/teams.php #FRR"><img id="logo" src="immagini/ferrari.jpg">Ferrari</a>
+                      <a href="pagine/teams.php #MCL"><img id="logo" src="immagini/mclaren.png">McLaren</a>
+                      <a href="pagine/teams.php #ALF"><img id="logo" src="immagini/alfa romeo.jpeg">Alfa Romeo</a>
+                      <a href="pagine/teams.php #HAAS"><img id="logo" src="immagini/haas.jpg">Haas</a>
+                      <a href="pagine/teams.php #WLM"><img id="logo" src="immagini/williams.jpg">Williams</a>
                     </div>
                   </div>
               </div>
 
               <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/circuiti.html">CIRCUITI</a></button>
+                <button class="dropbtn"><a href="pagine/circuiti.php">CIRCUITI</a></button>
                   <div class="dropdown-content-circuiti">
                     <div class="circuiti">
-                      <a href="pagine/circuiti.html" #BAH><img id="flag" src="immagini/bahrain.png">Bahrain</a>
-                      <a href="pagine/circuiti.html" #ARAB><img id="flag" src="immagini/arabia.png">Arabia Sudata</a>
-                      <a href="pagine/circuiti.html" #AUS><img id="flag" src="immagini/australia.jpg">Australia</a>
-                      <a href="pagine/circuiti.html" #CHI><img id="flag" src="immagini/china.png">Cina</a>
-                      <a href="pagine/circuiti.html" #BAKU><img id="flag" src="immagini/azerbaijan.png">Azerbaijan</a>
-                      <a href="pagine/circuiti.html" #MIAMI><img id="flag" src="immagini/USA.png">Miami</a>
-                      <a href="pagine/circuiti.html" #IMO><img id="flag" src="immagini/italia.png">Imola</a>
-                      <a href="pagine/circuiti.html" #MON><img id="flag" src="immagini/monaco.png">Monaco</a> 
+                      <a href="pagine/circuiti.php" #BAH><img id="flag" src="immagini/bahrain.png">Bahrain</a>
+                      <a href="pagine/circuiti.php" #ARAB><img id="flag" src="immagini/arabia.png">Arabia Sudata</a>
+                      <a href="pagine/circuiti.php" #AUS><img id="flag" src="immagini/australia.jpg">Australia</a>
+                      <a href="pagine/circuiti.php" #CHI><img id="flag" src="immagini/china.png">Cina</a>
+                      <a href="pagine/circuiti.php" #BAKU><img id="flag" src="immagini/azerbaijan.png">Azerbaijan</a>
+                      <a href="pagine/circuiti.php" #MIAMI><img id="flag" src="immagini/USA.png">Miami</a>
+                      <a href="pagine/circuiti.php" #IMO><img id="flag" src="immagini/italia.png">Imola</a>
+                      <a href="pagine/circuiti.php" #MON><img id="flag" src="immagini/monaco.png">Monaco</a> 
                     </div>
                     <div class="circuiti">
-                      <a href="pagine/circuiti.html" #ESP><img id="flag" src="immagini/spagna.png">Spagna</a>
-                      <a href="pagine/circuiti.html" #CAN><img id="flag" src="immagini/canada.jpg">Canada</a>                          
-                      <a href="pagine/circuiti.html" #AUSTR><img id="flag" src="immagini/Austria.jpg">Austria</a>
-                      <a href="pagine/circuiti.html" #INGL><img id="flag" src="immagini/UK.png">Regno Unito</a>
-                      <a href="pagine/circuiti.html" #UNG><img id="flag" src="immagini/ungheria.png">Ungheria</a>
-                      <a href="pagine/circuiti.html" #SPA><img id="flag" src="immagini/belgio.png">Belgio</a>
-                      <a href="pagine/circuiti.html" #NDL><img id="flag" src="immagini/Olanda.jpg">Olanda</a>
-                      <a href="pagine/circuiti.html" #ITA><img id="flag" src="immagini/italia.png">Italia</a>                      
+                      <a href="pagine/circuiti.php" #ESP><img id="flag" src="immagini/spagna.png">Spagna</a>
+                      <a href="pagine/circuiti.php" #CAN><img id="flag" src="immagini/canada.jpg">Canada</a>                          
+                      <a href="pagine/circuiti.php" #AUSTR><img id="flag" src="immagini/Austria.jpg">Austria</a>
+                      <a href="pagine/circuiti.php" #INGL><img id="flag" src="immagini/UK.png">Regno Unito</a>
+                      <a href="pagine/circuiti.php" #UNG><img id="flag" src="immagini/ungheria.png">Ungheria</a>
+                      <a href="pagine/circuiti.php" #SPA><img id="flag" src="immagini/belgio.png">Belgio</a>
+                      <a href="pagine/circuiti.php" #NDL><img id="flag" src="immagini/Olanda.jpg">Olanda</a>
+                      <a href="pagine/circuiti.php" #ITA><img id="flag" src="immagini/italia.png">Italia</a>                      
                     </div>
                     <div class="circuiti">
-                      <a href="pagine/circuiti.html" #SIN><img id="flag" src="immagini/singapore.png">Singapore</a>                                                 
-                      <a href="pagine/circuiti.html" #GIAP><img id="flag" src="immagini/giappone.png">Giappone</a>
-                      <a href="pagine/circuiti.html" #QAT><img id="flag" src="immagini/qatar.jpg">Qatar</a>
-                      <a href="pagine/circuiti.html" #COTA><img id="flag" src="immagini/USA.png">USA</a> 
-                      <a href="pagine/circuiti.html" #MES><img id="flag" src="immagini/messico.png">Messico</a> 
-                      <a href="pagine/circuiti.html" #BRA><img id="flag" src="immagini/brasile.jpg">Brasile</a>
-                      <a href="pagine/circuiti.html" #LAS><img id="flag" src="immagini/USA.png">Las Vegas</a>                        
-                      <a href="pagine/circuiti.html" #ABU><img id="flag" src="immagini/abudhabi.png">Abu Dhabi</a>
+                      <a href="pagine/circuiti.php" #SIN><img id="flag" src="immagini/singapore.png">Singapore</a>                                                 
+                      <a href="pagine/circuiti.php" #GIAP><img id="flag" src="immagini/giappone.png">Giappone</a>
+                      <a href="pagine/circuiti.php" #QAT><img id="flag" src="immagini/qatar.jpg">Qatar</a>
+                      <a href="pagine/circuiti.php" #COTA><img id="flag" src="immagini/USA.png">USA</a> 
+                      <a href="pagine/circuiti.php" #MES><img id="flag" src="immagini/messico.png">Messico</a> 
+                      <a href="pagine/circuiti.php" #BRA><img id="flag" src="immagini/brasile.jpg">Brasile</a>
+                      <a href="pagine/circuiti.php" #LAS><img id="flag" src="immagini/USA.png">Las Vegas</a>                        
+                      <a href="pagine/circuiti.php" #ABU><img id="flag" src="immagini/abudhabi.png">Abu Dhabi</a>
                     </div>
                   </div>
               </div>
 
               <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/classifica.html">CLASSIFICA </a></button>
+                <button class="dropbtn"><a href="pagine/classifica.php">CLASSIFICA </a></button>
               </div>
               
               <div class="dropdown">
-                <button class="dropbtn" id="stg"><a href="pagine/stagionipassate.html">STAGIONI</a></button>
+                <button class="dropbtn" id="stg"><a href="pagine/stagionipassate.php">STAGIONI</a></button>
               </div>
               <div class="fantasy">
                 <a href="pagine/">FANTASY</a>

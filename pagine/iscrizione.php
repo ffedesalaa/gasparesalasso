@@ -4,6 +4,7 @@
     if(isset($_POST["email"])) $email = $_POST["email"]; else $email ="";
     if(isset($_POST["password"])) $password = $_POST["password"];  else $password = "";
     if(isset($_POST["conferma"])) $conferma = $_POST["conferma"];  else $conferma = "";
+    $_SESSION["accesso"] = $accesso = false;
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
     <body>
         <header id="haccesso">
             <div class="logoaccesso">
-                <a href="../home.html"><img src="../immagini/f1logo.png"></a>
+                <a href="../home.php"><img src="../immagini/f1logo.png"></a>
             </div>
             <div class="cambio">
                 <div class="cambio_a" id="accedi">
@@ -48,7 +49,16 @@
   
     <p id="paccesso">
         <?php
-            if($password !== $conferma)
+
+        if(isset($_POST["email"]) AND isset($_POST["password"]) AND isset($_POST["nome"]) AND isset($_POST["cognome"]))
+        {
+            if($_POST["email"] === "" || $_POST["password"] === "" || $_POST["nome"] === "" || $_POST["cognome"] === "")
+            {
+                echo"Inserire dati";
+            }
+            else{
+
+                if($password !== $conferma)
             {
                 echo"Le password non corrispondono";
             }
@@ -79,6 +89,7 @@
                         if ($connessione->query($myquery) === true) {
                         session_start();
                         $_SESSION["email"]=$email;
+                        $_SESSION["accesso"] = $accesso = true;
                         
                         $connessione->close();
 
@@ -90,11 +101,10 @@
                     }       
                 }
                 
-              
-                
-
-                
+              }
             }
+        }
+            
         ?>
     </p>
 

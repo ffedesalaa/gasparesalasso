@@ -3,12 +3,14 @@
 
     require_once('../file_php/dati_connessione.php');
 
-    if(isset($_SESSION["nome"]))
+    if(isset($_SESSION["email"]))
     {
         header('location ../home.php');
+        $email = $_SESSION["email"];
     }
 
-    $nome = $_SESSION['nome'];
+    $accesso = $_SESSION["accesso"];
+    
 ?>
 
 <!DOCTYPE html>
@@ -24,12 +26,31 @@
 
   <body class="home">
     <div>
-    <script src="../script_header_footer/script_header_accesso.js"></script>
+    <?php
+      include('../script_header_footer/script_header_accesso.php')
+    ?>
       <menu>
         <div id="scacchi">
           <div class="saluto">
              <div class="saluto_utente">
-              <p> <?php echo"Ciao {$nome}! "  ?> </p>
+              <p> <?php 
+                    $connessione = new mysqli("localhost", "root", "", "formula_1");
+                    if($connessione->connect_error){
+                      die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
+                    }
+
+                    $sql = "SELECT nome FROM utente WHERE email = '$email'";
+
+                    $ris = $connessione->query($sql) or die("<p>Query fallita!</p>");
+
+                    foreach($ris as $riga)
+                    {
+                      echo"Ciao " . $riga["nome"] ;
+                    }
+
+                    
+              ?>
+               </p>
           </div> 
           <div class="Login" id="acc">
             <p>Logout</p>

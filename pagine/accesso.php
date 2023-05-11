@@ -4,6 +4,7 @@
 
     if(isset($_POST["email"])) {$email = $_POST["email"];} else {$email = "";}
     if(isset($_POST["password"])) {$password = $_POST["password"];} else {$password = "";}
+    $_SESSION["accesso"] = $accesso = false;
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +48,7 @@
     <p id="paccesso">
         <?php
 
-        if(isset($email) AND isset($password))
+        if(isset($email) && isset($password))
         {
             $connessione = new mysqli("localhost", "root", "", "formula_1");
 
@@ -57,23 +58,29 @@
             }
 
             $sql = "SELECT email, password FROM utente WHERE email = '$email' AND password = '$password'";
+            
 
-            $ris = $connessione->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");            ;
+            $ris = $connessione->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");            
 
-            $num_rows = mysqli_num_rows($ris);
-
-            if($num_rows == 0)
+            // $num_rows = mysqli_num_rows($ris);
+            // $num_rows = $ris->num_rows;
+            echo 'ciao';
+            if($ris->num_rows == 0)
             {
+                echo"sql fatta";
                 echo"Utente non trovato";
                 $connessione->close();
+               
             }
             else
             {
+                echo 'else';
+                
                 $_SESSION["email"] = $email;
+                $_SESSION["accesso"] = $accesso = true;
 
                 $connessione->close();
-
-                header("Refresh 1; URL=home_accesso.php");
+                header('refresh:1; URL=home_accesso.php');
             }
 
         }
