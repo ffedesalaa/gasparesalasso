@@ -1015,8 +1015,9 @@ input::placeholder{
 
 .contenitore_area_personale{
     display: flex;
-    justify-content: space-between;
     background: #717171;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .info{
@@ -1072,21 +1073,21 @@ input::placeholder{
 .modifican{
     position: absolute;
     right: 390px;
-    top: 120px;
+    top: 130px;
     display: none;
 }
 
 .modificac{
     position: absolute;
     right: 390px;
-    top: 160px;
+    top: 180px;
     display: none;
 }
 
 .modificae{
     position: absolute;
     right: 390px;
-    top: 200px;
+    top: 230px;
     display: none;
 }
 
@@ -1113,8 +1114,21 @@ input::placeholder{
     font-family: 'formula1-bold';
 }
 
+#conferma_modifica{
+    text-align: center;
+}
 
+.contenitore_img{
+    background: #717171;
+    display: flex;
+    justify-content: center;
 
+}
+
+#immaginiprf{
+    height: 100%;
+    width: 100%;
+}
 
 
 

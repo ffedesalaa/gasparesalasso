@@ -8,6 +8,7 @@
     if(isset($_SESSION["nome"])) $nome = $_SESSION["email"];
     if(isset($_SESSION["cognome"])) $cognome = $_SESSION["cognome"];
     if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"]; else $acceso = false;
+    if(isset($_SESSION["immagine_profilo"])) $immagine_profilo = $_SESSION["immagine_profilo"];
 
       
 ?>
@@ -51,10 +52,9 @@
                                 </div>
 
                                 <div class="contieni_edit">
-                                    <div class="edit" id="mnome"> <a href="">Modifica</a> </div>
-                                    <div class="edit" id="mcognome"> <a href="">Modifica</a> </div>
-                                    <div class="edit" id="memail"> <a href="">Modifica</a> </div>
-                                    <div class="edit" id="mpassword"> <a href="">Modifica</a> </div>
+                                    <div class="edit" id="mnome"> <a href="">Modifica nome</a> </div>
+                                    <div class="edit" id="mcognome"> <a href="">Modifica cognome</a> </div>
+                                    <div class="edit" id="mpassword"> <a href="">Modifica password</a> </div>
 
                                 </div>
 
@@ -68,21 +68,14 @@
                            </div>
 
                            <div class="modificac">
-                           <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
+                           <form action="'. $_SERVER['PHP_SELF'] .'" method="post" id="form_modifica">
                               <input type="text" placeholder="Modifica" name="modifica_cognome">
                               <input type="submit" value="Conferma modifica" id="bottone_modifica">
                            </form>
                           </div>
 
-                          <div class="modificae">
-                          <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
-                             <input type="text" placeholder="Modifica" name="modifica_email">
-                             <input type="submit" value="Conferma modifica" id="bottone_modifica">
-                          </form>
-                         </div>
-
                          <div class="modificap">
-                         <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
+                         <form action="'. $_SERVER['PHP_SELF'] .'" method="post" id="form_modifica">
                             <input type="text" placeholder="Modifica" name="modifica_password">
                             <input type="submit" value="Conferma modifica" id="bottone_modifica">
                          </form>
@@ -91,7 +84,7 @@
                             
                         }
 
-                        if($_SERVER['REQUEST_METHOD'] === 'POST')
+                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_nome"])  && $_POST["modifica_nome"] !== "")
                         {
                             
                     
@@ -106,6 +99,49 @@
                                 if($ris)
                                 {
                                    $_SESSION["nome"] = $modifica_nome;
+                                   echo'<p id="conferma_modifica">Nome cambiato con successo</p>';
+                                }
+                                else
+                                {
+                                   echo"errore";
+                                }
+                        }
+
+                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_cognome"])  && $_POST["modifica_cognome"] !== "")
+                        {                    
+                                $connessione = new mysqli("localhost", "root", "", "formula_1");
+                    
+                                $modifica_cognome = $_POST["modifica_cognome"];
+                                          
+                                $sql1 = "UPDATE utente SET cognome = '$modifica_cognome' WHERE email='" . $email . "'";
+                                
+                                $ris1 = $connessione->query($sql1);
+                              
+                                if($ris1)
+                                {
+                                   $_SESSION["cognome"] = $modifica_cognome;
+                                   echo'<p id="conferma_modifica">Cognome cambiato con successo</p>';
+                                }
+                                else
+                                {
+                                   echo"errore";
+                                }
+                        }
+
+                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_password"])  && $_POST["modifica_password"] !== "")
+                        {                    
+                                $connessione = new mysqli("localhost", "root", "", "formula_1");
+                    
+                                $modifica_password = $_POST["modifica_password"];
+                                          
+                                $sql2 = "UPDATE utente SET password = '$modifica_password' WHERE email='" . $email . "'";
+                                
+                                $ris2 = $connessione->query($sql2);
+                              
+                                if($ris2)
+                                {
+                                   $_SESSION["password"] = $modifica_password;
+                                   echo'<p id="conferma_modifica">password cambiata con successo</p>';
                                 }
                                 else
                                 {
@@ -115,6 +151,26 @@
 
                      ?>
             </div>
+
+                <div class="contenitore_img">
+                    <?php
+                        if(isset($immagine_profilo))
+                        {
+                            echo'<img src="'. $immagine_profilo. '" id="immagineprf">';
+                        }
+                        else{
+                            echo'
+                            <img src = "../immagini/iconaomino.png" id="immagineprf">
+                            <form>
+                                <input type="file" value="Inserisci immagine profilo">
+                            </form>
+                            
+                            ';
+
+                        }
+                    ?>
+                </div>
+
         </div>
 
     </div>
