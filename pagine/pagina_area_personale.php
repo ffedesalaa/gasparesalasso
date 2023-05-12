@@ -8,6 +8,8 @@
     if(isset($_SESSION["nome"])) $nome = $_SESSION["email"];
     if(isset($_SESSION["cognome"])) $cognome = $_SESSION["cognome"];
     if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"]; else $acceso = false;
+
+      
 ?>
 
 <!DOCTYPE html>
@@ -59,38 +61,61 @@
                              
                             </div>
                             <div class="modifican">
-                            <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
+                            <form action="'. $_SERVER['PHP_SELF'] .'"  method="post" id="form_modifica">
                                <input type="text" placeholder="Modifica" name="modifica_nome">
                                <input type="submit" value="Conferma modifica" id="bottone_modifica">
                             </form>
                            </div>
 
                            <div class="modificac">
-                           <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="formmodifica">
-                              <input type="text" placeholder="Modifica" name="modifica_nome">
+                           <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
+                              <input type="text" placeholder="Modifica" name="modifica_cognome">
+                              <input type="submit" value="Conferma modifica" id="bottone_modifica">
                            </form>
                           </div>
 
                           <div class="modificae">
-                          <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="formmodifica">
-                             <input type="text" placeholder="Modifica" name="modifica_nome">
+                          <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
+                             <input type="text" placeholder="Modifica" name="modifica_email">
+                             <input type="submit" value="Conferma modifica" id="bottone_modifica">
                           </form>
                          </div>
 
                          <div class="modificap">
-                         <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="formmodifica">
-                            <input type="text" placeholder="Modifica" name="modifica_nome">
+                         <form action="'. $_SERVER['PHP_SELF'] .'" method="POST" id="form_modifica">
+                            <input type="text" placeholder="Modifica" name="modifica_password">
+                            <input type="submit" value="Conferma modifica" id="bottone_modifica">
                          </form>
                         </div>
                             ';  
+                            
                         }
 
+                        if($_SERVER['REQUEST_METHOD'] === 'POST')
+                        {
+                            
+                    
+                                $connessione = new mysqli("localhost", "root", "", "formula_1");
+                    
+                                $modifica_nome = $_POST["modifica_nome"];
+                                          
+                                $sql = "UPDATE utente SET nome = '$modifica_nome' WHERE email='" . $email . "'";
+                                
+                                $ris = $connessione->query($sql);
+                              
+                                if($ris)
+                                {
+                                   $_SESSION["nome"] = $modifica_nome;
+                                }
+                                else
+                                {
+                                   echo"errore";
+                                }
+                        }
 
                      ?>
             </div>
         </div>
-
-        
 
     </div>
     <script src="../script_header_footer/script_footer.js"></script>
@@ -176,3 +201,4 @@
     </script>
     </body>
 </html>
+

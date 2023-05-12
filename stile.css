@@ -1025,7 +1025,7 @@ input::placeholder{
     border-right: solid red 10px;
     border-radius: 10px;
     background: lightgrey;
-    width: 40%;
+    width: 50%;
     margin: 20px auto;
     min-height: 180px;
 }
@@ -1071,33 +1071,47 @@ input::placeholder{
 
 .modifican{
     position: absolute;
-    right: 535px;
+    right: 390px;
     top: 120px;
     display: none;
 }
 
 .modificac{
     position: absolute;
-    right: 535px;
+    right: 390px;
     top: 160px;
     display: none;
 }
 
 .modificae{
     position: absolute;
-    right: 535px;
+    right: 390px;
     top: 200px;
     display: none;
 }
 
 .modificap{
     position: absolute;
-    right: 535px;
+    right: 390px;
     top: 240px;
     display: none;
 }
 
+#form_modifica{
+   
+    width: 300px;
+}
 
+#form_modifica input{
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    border: solid red 2px;
+}
+
+#bottone_modifica{
+    font-family: 'formula1-bold';
+}
 
 
 
