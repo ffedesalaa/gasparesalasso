@@ -2,7 +2,24 @@
     echo <<<EOD
     <header>
     <div class="fotomenu">
-      <a href="../home.php"><img id="f1logo" src="../immagini/f1logo.png"></a> 
+    EOD;
+
+    $accesso = false; // Valore predefinito
+
+    if(isset($_SESSION["accesso"])) {
+        $accesso = $_SESSION["accesso"];
+    }
+
+    if($accesso == true)
+    {
+      echo'  <a href="home_accesso.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
+    }
+    else
+    {
+      echo' <a href="../home.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
+    }
+      
+     echo <<<EOD
     </div>
     
     <a href=""><div class="icon_bar">
@@ -112,6 +129,9 @@
         </div>
          </nav>
         </div> 
+        <div class="fotomenu">
+        <a href="https://www.fia.com/"><img id="fialogo" src= "../immagini/fialogo.png"></a>
+       </div>
     </header>
     EOD;
 ?>

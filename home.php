@@ -1,3 +1,18 @@
+<?php
+    session_start();
+
+    require_once('file_php/dati_connessione.php');
+
+    if(isset($_SESSION["email"]))
+    {
+        header('location ../home.php');
+        $email = $_SESSION["email"];
+    }
+
+    if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{ $accesso = false;}
+    
+?>  
+
 <!DOCTYPE html>
 <html> 
 
@@ -26,7 +41,7 @@
             <nav>
               
               <div class="dropdown">
-                <button class="dropbtn"><a href="pagine/piloti.html">PILOTI</a></button>
+                <button class="dropbtn"><a href="pagine/piloti.php">PILOTI</a></button>
                   <div class="dropdown-content-piloti">
                     <div class="piloti">
                       <a href="pagine/piloti.php #VER"><img id="caschi" src="immagini/verstappen.PNG">M. Verstappen</a>
@@ -123,6 +138,9 @@
               </div>
              </nav>
             </div> 
+            <div class="fotomenuhome">
+        <a href="https://www.fia.com/"><img id="fialogo" src= "immagini/fialogo.png"></a>
+       </div>
       </header>
 
       <menu>

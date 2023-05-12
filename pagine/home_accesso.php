@@ -9,7 +9,8 @@
         $email = $_SESSION["email"];
     }
 
-    $accesso = $_SESSION["accesso"];
+      if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
+
     
 ?>
 
@@ -53,7 +54,9 @@
                </p>
           </div> 
           <div class="Login" id="acc">
-            <p>Logout</p>
+            <form action="../file_php/logout.php" id="form2">
+              <input type="submit" value="Logout" id="logout" ></input>
+            </form>
         </div> 
           </div>
          

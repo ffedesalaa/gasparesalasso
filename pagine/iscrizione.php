@@ -4,7 +4,7 @@
     if(isset($_POST["email"])) $email = $_POST["email"]; else $email ="";
     if(isset($_POST["password"])) $password = $_POST["password"];  else $password = "";
     if(isset($_POST["conferma"])) $conferma = $_POST["conferma"];  else $conferma = "";
-    $_SESSION["accesso"] = $accesso = false;
+    if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
             </div>
         </header>
     <div class="contenitore_accesso">
-         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id="formaccesso">
             <label for="nome">Nome</label>
             <input type="text" placeholder="Inserisci Nome" name="nome" id="nome" required>
             <label for="cognome">Cognome</label>
@@ -89,7 +89,7 @@
                         if ($connessione->query($myquery) === true) {
                         session_start();
                         $_SESSION["email"]=$email;
-                        $_SESSION["accesso"] = $accesso = true;
+                        $_SESSION["accesso"] = true;
                         
                         $connessione->close();
 
@@ -130,3 +130,7 @@
         });
     </script>
 </html>
+
+<?php
+    $connessione->close();
+?>

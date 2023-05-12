@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    
+    require_once('../file_php/dati_connessione.php');
+
+    if(isset($_SESSION["email"]))
+    {
+        $email = $_SESSION["email"];
+    }
+    if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"]; else $acceso = false;
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +24,9 @@
 
   <body>
     <div>
-      <script src="../script_header_footer/script_header.js"></script>
+    <?php
+      include('../script_header_footer/script_header.php')
+    ?>
       
       <menu class="team">
         <div class="team2" id="RDB">

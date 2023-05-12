@@ -4,7 +4,8 @@
 
     if(isset($_POST["email"])) {$email = $_POST["email"];} else {$email = "";}
     if(isset($_POST["password"])) {$password = $_POST["password"];} else {$password = "";}
-    $_SESSION["accesso"] = $accesso = false;
+    if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
+    
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@
         </header>
     <div class="contenitore_accesso" id="contenitoreacc">
         <div class="contenitore_form">
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="formaccesso">
                 <label for="email">Email</label>
                 <input type="email" placeholder="Inserisci email" name="email" id="email" required>
                 <label for="password">Password</label>
@@ -67,15 +68,12 @@
             echo 'ciao';
             if($ris->num_rows == 0)
             {
-                echo"sql fatta";
                 echo"Utente non trovato";
                 $connessione->close();
                
             }
             else
-            {
-                echo 'else';
-                
+            {   
                 $_SESSION["email"] = $email;
                 $_SESSION["accesso"] = $accesso = true;
 
@@ -108,3 +106,6 @@
         });
     </script>
 </html>
+<?php
+    $connessione->close();
+?>

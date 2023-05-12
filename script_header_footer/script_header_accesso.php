@@ -3,7 +3,7 @@
     <header>
     <div class="fotomenu">
     EOD;
-    if($accesso === true)
+    if($accesso == true)
     {
       echo'  <a href="home_accesso.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
     }
@@ -120,7 +120,12 @@
           <a href="">FANTASY</a>
         </div>
          </nav>
+       
         </div> 
+
+        <div class="fotomenu">
+        <a href="https://www.fia.com/"><img id="fialogo" src= "../immagini/fialogo.png"></a>
+       </div>
     </header>
     EOD;
 ?>

@@ -28,7 +28,7 @@ body{
 
 /*HEADER*/
 
-header{background-color: #fff; padding: 0px 0px 0px 15px; width: 100%; display: flex; flex-wrap: wrap;}
+header{background-color: #fff; padding: 0px 0px 0px 15px; width: 100%; display: flex; flex-wrap: nowrap;}
 
 nav{
     background-color: #fff;
@@ -75,7 +75,7 @@ nav{
 }
   
 .dropbtn {
-    font-size: 22px;  
+    font-size: 20px;  
     height: 60px;
     border: none;
     outline: none;
@@ -339,18 +339,20 @@ nav{
 
 .accesso_iscrizione{
     position: absolute;
-    right: 10px;
+    right: 90px;
     display: flex;
     justify-content: space-between;
     width: 200px;
+    height: 53px;
 }
 
 .saluto{
     position: absolute;
-    right: 30px;
+    right: 80px;
     display: flex;
     justify-content: space-between;
     width: 300px;
+    height: 7.5%;
 }
 
 .saluto_utente{
@@ -366,11 +368,11 @@ nav{
 
 .Login{
     width: 100px;
-    text-align: center;
+    justify-content: center;
     padding: 3px;
+    display: flex;
+    align-items: center;
 }
-
-
 
 .Login:hover{
     background-color: red;
@@ -394,28 +396,48 @@ nav{
 #iscrizione a{
     text-decoration: none;
     color: white;
+    font-family: 'formula1-bold';
 }
 
 #acc a{
     text-decoration: none;
     color: black;
+    font-family: 'formula1-bold';
 }
+
 
 #acc{
     background: white;
     width: 50%;
-    height: 100%;
+}
+
+#logout{
+    border: none;
+    background: white;
+    font-family: 'formula1-bold';
+    font-size: 20px;   
+    height: 7.5%;
+    margin: 0 auto;
+}
+
+
+
+#form2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 #scacchi{
     display: flex;
-    height: 30px;
+    height: 60px;
     background: url(immagini/starter.jpg);
     background-repeat: repeat;
-    background-size: 50px;
+    background-size: 70px;
     background-position: center;
-    border-top: solid red 3px;
-    border-bottom: solid red 3px;
+    border-top: solid red 4px;
+    border-bottom: solid red 4px;
     margin-bottom: 10px;
 }
 
@@ -921,7 +943,7 @@ footer p{color: #fff;}
     margin: 0px 15px;
 }
 
-form{
+#formaccesso{
     width: 600px;
     display: flex;
     font-family: 'formula1-regular';
