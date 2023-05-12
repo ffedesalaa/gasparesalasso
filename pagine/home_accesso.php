@@ -58,7 +58,24 @@
               <input type="submit" value="Logout" id="logout" ></input>
             </form>
         </div> 
+        
           </div>
+          <div class="saluto_utente" id="area_personale">
+            <?php
+                $acceso = false;
+
+                if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"];
+
+                if($acceso === true)
+                {
+                  echo'<a href ="pagina_area_personale.php"><img src="../immagini/iconaomino.png" id="immagineomino"></a>';
+                }
+                else
+                {
+                  echo '<a href ="pagina_area_personale.php"><img src="../immagini/iconaomino.png" id="immagineomino"></a>';
+                }
+            ?>
+        </div>
          
         </div>
         <div class="griglia">

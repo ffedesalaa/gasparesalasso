@@ -93,8 +93,8 @@
                         
                         $connessione->close();
 
-                        echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi.";
-                        header('Refresh: 5; URL=home_accesso.php');
+                        echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home.";
+                        header('Refresh: 0.5; URL=home_accesso.php');
 
                     } else {
                         echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $connessione->error;

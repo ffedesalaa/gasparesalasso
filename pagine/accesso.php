@@ -33,6 +33,7 @@
                 </div>
             </div>
         </header>
+    <div class="contenitore_pagina_accesso">
     <div class="contenitore_accesso" id="contenitoreacc">
         <div class="contenitore_form">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="formaccesso">
@@ -51,39 +52,43 @@
 
         if(isset($email) && isset($password))
         {
-            $connessione = new mysqli("localhost", "root", "", "formula_1");
-
-            if($connessione->connect_error)
+            if($email !== "" && $password !== "")
             {
-                die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
+                $connessione = new mysqli("localhost", "root", "", "formula_1");
+
+                if($connessione->connect_error)
+                {
+                    die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
+                }
+    
+                $sql = "SELECT email, password FROM utente WHERE email = '$email' AND password = '$password'";
+                
+    
+                $ris = $connessione->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");            
+    
+                // $num_rows = mysqli_num_rows($ris);
+                // $num_rows = $ris->num_rows;
+                if($ris->num_rows == 0)
+                {
+                    echo"Utente non trovato";
+                    $connessione->close();
+                   
+                }
+                else
+                {   
+                    $_SESSION["email"] = $email;
+                    $_SESSION["accesso"] = $accesso = true;
+    
+                    $connessione->close();
+                    header('refresh:0.5; URL=home_accesso.php');
+                }  
             }
-
-            $sql = "SELECT email, password FROM utente WHERE email = '$email' AND password = '$password'";
-            
-
-            $ris = $connessione->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");            
-
-            // $num_rows = mysqli_num_rows($ris);
-            // $num_rows = $ris->num_rows;
-            if($ris->num_rows == 0)
-            {
-                echo"Utente non trovato";
-                $connessione->close();
-               
-            }
-            else
-            {   
-                $_SESSION["email"] = $email;
-                $_SESSION["accesso"] = $accesso = true;
-
-                $connessione->close();
-                header('refresh:1; URL=home_accesso.php');
-            }
+           
 
         }
         ?>
     </p>    
-  
+    </div>
 
     </body>
 
