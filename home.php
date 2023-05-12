@@ -133,8 +133,8 @@
               <div class="dropdown">
                 <button class="dropbtn" id="stg"><a href="pagine/stagionipassate.php">STAGIONI</a></button>
               </div>
-              <div class="fantasy">
-                <a href="pagine/">FANTASY</a>
+              <div class="dropdown">
+                <button class="dropbtn"><a href="pagine/">FANTASY</a></button>
               </div>
              </nav>
             </div> 

@@ -31,7 +31,7 @@
                 </div>
             </div>
         </header>
-    <div class="contenitore_accesso">
+    <div class="contenitore_iscrizione">
          <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id="formaccesso">
             <label for="nome">Nome</label>
             <input type="text" placeholder="Inserisci Nome" name="nome" id="nome" required>

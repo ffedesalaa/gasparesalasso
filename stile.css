@@ -219,28 +219,7 @@ nav{
     margin-top: 8px;
 }
 
-.fantasy {
-    font-size: 22px;  
-    height: 60px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: inherit;
-    width: 15%;
-    padding-top: 15px;
-}
 
-.fantasy a{
-    text-decoration: none;
-    color: black;
-}
-
-.fantasy:hover{
-    background-color: red;
-    transform: scale(1.1);
-    transition: 0.5s;
-    opacity: 1;
-}
 
 #fialogo{
     width: 80px;
@@ -276,7 +255,6 @@ nav{
     nav{flex-direction: column; margin: 0 auto; }
     .dropdown  {margin: 0 auto; width: 100%;}
     .dropbtn{width: 100%;}
-    .fantasy{width: 100%;}
     .dropdown:hover .dropdown-content-circuiti{display: none;}   
     .dropdown:hover .dropdown-content-teams { display: none;}
     .dropdown:hover .dropdown-content-piloti { display: none;}
@@ -293,7 +271,6 @@ nav{
     nav{flex-direction: column; margin: 0 auto; }
     .dropdown  {margin: 0 auto; width: 100%;}
     .dropbtn{width: 100%;}
-    .fantasy{width: 100%;}
     .dropdown:hover .dropdown-content-circuiti{display: none;}   
     .dropdown:hover .dropdown-content-teams { display: none;}
     .dropdown:hover .dropdown-content-piloti { display: none;}
@@ -889,9 +866,20 @@ footer p{color: #fff;}
     align-items: center;
     justify-content: center;
     background: white;
+    min-height: 400px;
+    position: relative;
+}
+
+
+.contenitore_iscrizione{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
     min-height: 550px;
     position: relative;
 }
+
 
 #contenitoreacc{
     min-height: 500px;

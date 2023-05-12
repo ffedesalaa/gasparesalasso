@@ -65,7 +65,6 @@
 
             // $num_rows = mysqli_num_rows($ris);
             // $num_rows = $ris->num_rows;
-            echo 'ciao';
             if($ris->num_rows == 0)
             {
                 echo"Utente non trovato";
