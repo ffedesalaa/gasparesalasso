@@ -130,7 +130,3 @@
         });
     </script>
 </html>
-
-<?php
-    $connessione->close();
-?>

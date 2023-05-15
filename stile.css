@@ -968,7 +968,7 @@ label{
 input{
     height: 30px;
     width: 100%;
-     margin-bottom: 30px;
+    margin-bottom: 30px;
     border: solid black 3px;
 }
 
@@ -1120,9 +1120,38 @@ input::placeholder{
 .contenitore_img{
     background: #717171;
     display: flex;
-    justify-content: center;
-
+    align-items: center;
+    flex-direction: column;
 }
+
+#form_img_prf{
+    background: lightgrey;
+    width: 30%;
+    border-top: solid red 4px;
+    border-right: solid red 4px;
+    border-radius: 5px;
+    display: flex;
+}
+
+#bottone_img_prf{
+    margin: 0 auto;
+    border: none;
+    background: red;
+    width: 50%;
+    font-family: 'formula1-bold';
+}
+
+
+#input_img_prf{
+    
+    border: none;
+    font-family: 'formula1-regular';
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 30px;
+}
+
 
 #immaginiprf{
     height: 100%;

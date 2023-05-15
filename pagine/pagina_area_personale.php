@@ -9,8 +9,6 @@
     if(isset($_SESSION["cognome"])) $cognome = $_SESSION["cognome"];
     if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"]; else $acceso = false;
     if(isset($_SESSION["immagine_profilo"])) $immagine_profilo = $_SESSION["immagine_profilo"];
-
-      
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +26,55 @@
             include('../script_header_footer/script_header.php');
         ?>
         <div class="contenitore_area_personale">
+
+        <div class="contenitore_img">
+                    <?php
+                        if(isset($immagine_profilo))
+                        {
+                            echo'<img src="'. $immagine_profilo. '" id="immagineprf">';
+                        }
+                        else
+                        {
+                            echo '
+                            <img src = "../immagini/iconaomino.png" id="immagineprf">
+                            <form action="' .$_SERVER['PHP_SELF'].'" method="post" id="form_img_prf">
+                                <input type="file" value="Inserisci immagine profilo" id="input_img_prf">
+                                <input type="submit" value="Carica" id="bottone_img_prf">
+                            </form>
+                            ';
+                        }
+                    ?>
+                </div>
             <div class="info">
+
+            <?php
+                if(isset($_FILES["immagine_profilo"]) && $_FILES["immagine_profilo"] !== "" && $_SERVER['REQUEST_METHOD'] === 'POST')
+                {
+                    echo'SALAGAy';
+                    $connessione = new mysqli("localhost", "root", "", "formula_1");
+
+                    if($connessione->connect_error){
+                      die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
+                    }
+
+                    $sql = "UPDATE utente SET immagine_profilo = '$immagine_profilo' WHERE email='" . $email . "'";
+
+                    $ris = $connessione->query($sql) or die("<p>Query fallita!</p>");
+
+                    if($ris)
+                    {
+                       $_FILES["immagine_profilo"] = $immagine_profilo;
+                       echo'<p id="conferma_modifica">Immagine profilo cambiata con successo</p>';
+                    }
+                    else
+                    {
+                       echo"errore";
+                    }
+                }
+            ?>
                     <?php
                         $connessione = new mysqli("localhost", "root", "", "formula_1");
+
                         if($connessione->connect_error){
                           die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
                         }
@@ -152,24 +196,7 @@
                      ?>
             </div>
 
-                <div class="contenitore_img">
-                    <?php
-                        if(isset($immagine_profilo))
-                        {
-                            echo'<img src="'. $immagine_profilo. '" id="immagineprf">';
-                        }
-                        else{
-                            echo'
-                            <img src = "../immagini/iconaomino.png" id="immagineprf">
-                            <form>
-                                <input type="file" value="Inserisci immagine profilo">
-                            </form>
-                            
-                            ';
-
-                        }
-                    ?>
-                </div>
+                
 
         </div>
 
